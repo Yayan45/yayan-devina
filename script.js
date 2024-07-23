@@ -103,11 +103,11 @@ function playAudio() {
 audioIconWrapper.onclick = function () {
     if (isPlaying) {
         song.pause();
-        audioIcon.classList.remove('bi bi-disc-fill');
+        audioIcon.classList.remove('bi-disc-fill');
         audioIcon.classList.add('bi-pause-circle');
     } else {
         song.play();
-        audioIcon.classList.add('bi bi-disc-fill');
+        audioIcon.classList.add('bi-disc-fill');
         audioIcon.classList.remove('bi-pause-circle');
     }
 
@@ -118,3 +118,13 @@ audioIconWrapper.onclick = function () {
 //   disableScroll();
 // }
 disableScroll();
+
+
+//nama user
+const urlParams = new URLSearchParams(window.location.search);
+const nama = urlParams.get('n') || '';
+const pronoun = urlParams.get('p') || '';
+const namaContainer = document.querySelector('#cover .box span');
+namaContainer.innerText = `${pronoun} ${nama}`;
+
+document.querySelector('#nama').value = nama;
