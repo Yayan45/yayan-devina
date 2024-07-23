@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariawan & Rina</title>
+    <!-- Link Css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- font google -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;300;400;600;700&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div id="audio-container">
+        <audio id="song" loop>
+          <source src="audio/A Thousand Years.mp3" type="audio/mp3">
+        </audio>
+    
+        <div class="audio-icon-wrapper" style="display: none;">
+            <i class="bi bi-disc-fill"></i>
+        </div>
+      </div>
+
+
+    <section id="cover"
+        class="text-center cover w-100 h-100 bg-dark text-light align-items-center justify-content-center">
+        <div class="box">
+            <h4 class="mb-4">The Wedding Of</h4>
+            <div class="cover-img">
+                <img src="img/home.jpeg" class="img-thumbnail rounded-circle" width="200">
+            </div>
+            <h2 class="mt-3 mb-3">Ariawan & Rina</h2>
+            <h4 class="mb-4">
+                Kepada Yth <br>
+                Bapak/ibu/sdr/i
+            </h4>
+            <a href="#mempelai" class="btn btn-light mt-4" onClick="enableScroll()"><i class="bi bi-envelope-open icon-pesan"> </i>Buka Undangan</a>
+        </div>  
+    </section>
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar fixed-bottom rounded-2 navbar-light box-shadow" style="display: none;">
+        <div class="container-fluid">
+            <div class="navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav flex-row justify-content-evenly">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mempelai">
+                            <i class="bi bi-person-hearts"></i>
+                            <span>Mempelai</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#info">
+                            <i class="bi bi-calendar-heart-fill"></i>
+                            <span>Acara</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#story">
+                            <i class="bi bi-balloon-heart-fill"></i>
+                            <span>Cerita kami</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">
+                            <i class="bi bi-images"></i>
+                            <span>Gallery</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <section id="hero" class="hero text-center text-light">
+        <!-- https://getwaves.io/ -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -4px;">
+            <path fill="#212529" fill-opacity="1"
+                d="M0,160L48,144C96,128,192,96,288,90.7C384,85,480,107,576,138.7C672,171,768,213,864,218.7C960,224,1056,192,1152,197.3C1248,203,1344,245,1392,266.7L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+            </path>
+        </svg>
+        <div class="hero-caption container">
+            <h1 class="font-arabic py-4 px-2" style="font-size: 2rem" id="mempelai">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
+            <h4>Assalamualaikum warahmatullahi wabarakatuh</h4>
+            <p>
+                Tanpa mengurangi rasa hormat. Kami mengundang <br>
+                Bapak/Ibu/Saudara/i serta Kerabat sekalian untuk menghadiri acara <br>
+                pernikahan kami:</p>
+
+            <div class="row couple mt-5">
+                <div class="col-lg-6">
+                    <div class="row" data-aos="fade-right" data-aos-duration="2000">
+                        <div class="col-8 text-end">
+                            <h3 style="color: gold;">Ariawan Pratama</h3>
+                            <p class="parents">Jalan Mawar No. 123, Kelurahan Melati, Kecamatan Harapan, Jakarta Pusat,
+                                DKI Jakarta,RT 05 / RW 03</p>
+                            <p class="parents">Putra dari Bpk Syaiful ma'rif,S.kom <br> dan <br> Ibu.sundari</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="img/cwo.jpeg" alt="Putra Aditya" class="img-responsive rounded-4">
+                        </div>
+                    </div>
+                </div>
+
+                <span class="heart"><i class="bi bi-heart-fill"></i></span>
+
+                <div class="col-lg-6 mb-3 up">
+                    <div class="row" data-aos="fade-left" data-aos-duration="2000">
+                        <div class="col-4">
+                            <img src="img/cewe.jpeg" alt="Putri maharani" class="img-responsive rounded-4">
+                        </div>
+                        <div class="col-8 text-start">
+                            <h3 style="color: gold;">Rina Kusuma Dewi</h3>
+                            <p class="parents">Jalan gatot subroto No. 9, Kelurahan melati, Kecamatan Harapan, Jakarta
+                                Pusat, DKI Jakarta,RT 10 / RW 03</p>
+                            <p class="parents">Putra dari Bpk Tri Wahyono <br> dan <br> Ibu Siti aisyah,M.Kom</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center mt-4 mb-5">Suatu kehormatan dan kebahagiaan bagi kami jika saudara/i dapat hadir
+                    untuk memberikan doa dan restu kepada kami</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="info" class="bg-dark info">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-10 text-center">
+                    <h2>Informasi Acara</h2>
+                    <p class="alamat text-light">Jl. Jend. Sudirman Tim., Pakis Aji, Wanarejan Utara, Kec. Taman,
+                        Kabupaten Pemalang, Jawa Tengah</p>
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3960.9823239892185!2d109.4042223!3d-6.8927173!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6fdae1445a5379%3A0x32a92c1b155d76fc!2sGedung%20Serbaguna%20Pemalang!5e0!3m2!1sid!2sid!4v1715328073616!5m2!1sid!2sid"
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                    <a href="https://maps.app.goo.gl/FD6vhgHVCq9Eg7W4A" target="_blank"
+                        class="btn btn-light btn-sm my-3">Klik untuk
+                        membuka peta</a>
+                    <p class="text-light">Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di
+                        tujuan namun tidak
+                        ada tanda-tanda sedang dilangsungkan pernikahan, boleh jadi Anda salah jadwal, atau salah
+                        tempat.</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-5 col-10" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="card text-center text-bg-light mb-5">
+                        <div class="card-header">Akad Nikah</div>
+                        <div class="card-body">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <i class="bi bi-clock d-block"></i>
+                                    <span>08.00 - 10.00</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <i class="bi bi-calendar3 d-block"></i>
+                                    <span>Minggu, 20 November 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            Saat acara akad diharapkan untuk kondusif menjaga kekhidmatan dan kekhusyuan seluruh
+                            prosesi.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-10" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="card text-center text-bg-light">
+                        <div class="card-header">Resepsi</div>
+                        <div class="card-body">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <i class="bi bi-clock d-block"></i>
+                                    <span>11.00 - selesai</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <i class="bi bi-calendar3 d-block"></i>
+                                    <span>Minggu, 20 November 2023</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            Saat acara akad diharapkan untuk kondusif menjaga kekhidmatan dan kekhusyuan seluruh
+                            prosesi.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-2 text-bold text-date text-light">Menuju Acara</div>
+            <div class="time">
+                <div class="border rounded-pill shadow py-2 px-4 mx-2 mb-4">
+
+                    <!-- Ganti waktunya pada data-waktu (sesuai format tersebut) -->
+                    <div class="row justify-content-center teks-time" data-time="2024-12-25 08:00:00" id="count-down">
+                        <div class="col-3 p-1">
+                            <h2 class="d-inline m-0 p-0" id="day">0</h2><small
+                                class="ms-1 me-0 my-0 p-0 d-inline text-light">Hari</small>
+                        </div>
+                        <div class="col-3 p-1">
+                            <h2 class="d-inline m-0 p-0" id="hour">0</h2><small
+                                class="ms-1 me-0 my-0 p-0 d-inline text-light">Jam</small>
+                        </div>
+                        <div class="col-3 p-1">
+                            <h2 class="d-inline m-0 p-0" id="minute">0</h2><small
+                                class="ms-1 me-0 my-0 p-0 d-inline text-light">Menit</small>
+                        </div>
+                        <div class="col-3 p-1">
+                            <h2 class="d-inline m-0 p-0" id="second">0</h2><small
+                                class="ms-1 me-0 my-0 p-0 d-inline text-light">Detik</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="story" class="story">
+        <h2 class="text-center pt-5 font-aestetik color-primary">Cerita Kami</h2>
+        <div class="container  pb-5">
+            <div class="card mb-4" style="max-width:100%;">
+                <div class="row g-0">
+                    <div class="col-md-2">
+                        <img src="img/Universitas Indonesia.jpeg" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="card-body">
+                            <h5 class="card-title">Pertama Bertemu</h5>
+                            <p class="card-text">Pertama kali bertemu yaitu ketika sedang satu kampus di Universitas,
+                                dimana kita merupakan sama-sama pengurus dari organisasi mahasiswa. Pertemuan pertama
+                                kami terjadi saat rapat persiapan acara besar kampus. Saya terkesan dengan dedikasinya
+                                dan cara dia memimpin diskusi dengan tenang dan tegas.</p>
+                            <p class="card-text"><small class="text-body-secondary">16 Januari 2018</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4" style="max-width:100%;">
+                <div class="row g-0">
+                    <div class="col-md-2">
+                        <img src="img/deket.jpeg" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="card-body">
+                            <h5 class="card-title">Mulai Serius</h5>
+                            <p class="card-text">setelah mengalami serangkaian momen dan percakapan yang mendalam,
+                                akhirnya mengakui perasaan cinta mereka di taman kampus. Dengan penuh kehangatan dan
+                                harapan, memulai hubungan yang lebih dari sekadar rekan kerja atau sahabat. Keputusan
+                                untuk saling menerima membuka pintu bagi masa depan yang penuh dengan komitmen dan
+                                impian bersama</p>
+                            <p class="card-text"><small class="text-body-secondary">18 april 2019</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="max-width:100%;">
+                <div class="row g-0">
+                    <div class="col-md-2">
+                        <img src="img/tunangan.jpeg" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="card-body">
+                            <h5 class="card-title">Tunangan</h5>
+                            <p class="card-text">setelah menjalin hubungan yang erat dan penuh cinta, melangkah ke tahap
+                                berikutnya dalam hubungan mereka dengan tunangan di sebuah pantai indah di Bali. Di
+                                bawah langit senja, lamaran mereka menjadi momen yang menggembirakan dan mengesankan,
+                                memperingati komitmen mereka untuk membangun masa depan bersama.</p>
+                            <p class="card-text"><small class="text-body-secondary">22 Maret 2022</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery bg-dark pt-5">
+        <div class="container">
+            <h2 class="font-aestetik color-primary text-center" style="font-size: 60px;">Gallery Foto</h2>
+            <div class="row row-cols-lg-4 pb-5 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
+                <div class="col mt-3" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="img/Idea photo couple romantis.jpeg" alt="Putra & Putri 1"
+                        class="img-fluid w-100 rounded">
+                    </a>
+                </div>
+                <div class="col mt-3" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="img/Idea pose couple.jpeg" alt="Putra & Putri 2" class="img-fluid w-100 rounded">
+                </div>
+                <div class="col mt-3" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="img/Idea Pose Prewedding Couple.jpeg" alt="Putra dan Putri 3"
+                        class="img-fluid w-100 rounded">
+                </div>
+                <div class="col mt-3" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="img/Idea pose Prewedding.jpeg" alt="Putra & Putri 4" class="img-fluid w-100 rounded">
+                </div>
+                <div class="col mt-3" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="img/Wedding Adat Jawa.jpeg" alt="Putra & Putri 5" class="img-fluid w-100 rounded">
+                </div>
+                <div class="col mt-3" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="img/Idea pose Prewedding.jpeg" alt="Putra & Putri 5" class="img-fluid w-100 rounded">
+                </div>
+                <div class="col mt-3" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="img/Prewedding pose.jpeg" alt="Putra & Putri 5" class="img-fluid w-100 rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rsvp" class="rsvp">
+        <div class="container" data-aos="fade-up" data-aos-duration="1200">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-10 text-center">
+                    <h2 class="font-aestetik color-primary">Konfirmasi Kehadiran</h2>
+                    <p>Isi form di bawah ini untuk melakukan konfirmasi kehadiran.</p>
+                </div>
+            </div>
+
+            <form onsubmit="sendMessage()">
+                <div class="col-12">
+                    <div class="mb-3">
+                        <label for="nama" class="form-label">Nama</label>
+                        <input type="text" class="form-control" id="nama" name="nama">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="jumlah" class="form-label">Alamat</label>
+                        <input type="text" class="form-control" id="alamat" name="alamat">
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="konfirmasi" class="form-label">Konfirmasi kehadiran</label>
+                        <select name="konfirmasi" id="konfirmasi" class="form-select">
+                            <option selected>Pilih salah satu</option>
+                            <option value="Hadir">Hadir</option>
+                            <option value="Tidak Hadir">Tidak Hadir</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="jumlah" class="form-label">Jumlah Orang</label>
+                        <input type="number" class="form-control" id="jumlah" name="jumlah">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pesan">Ucapan Dan Doa</label>
+                        <textarea name="pesan" id="pesan" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="col-12" style="margin-top: 35px;">
+                    <button type="submit" class="btn btn-success  py-2 px-5">Kirim</button>
+                </div>
+            </form>
+
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-6">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        /**
+                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                        var disqus_config = function () {
+                            this.page.url = "https://yayan45.github.io/undangan-digital";  // Replace PAGE_URL with your page's canonical URL variable
+                            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+
+                        (function () { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://putra-putri-wedding.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments
+                            powered by Disqus.</a></noscript>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="gifts" class="gifts bg-dark pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-10 text-center text-light mt-5">
+                    <span class="mb-5">ungkapan tanda kasih</span>
+                    <h2 class="font-aestetik color-primary mt-4">Kirim Hadiah</h2>
+                    <p>Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami,dapat
+                        melalui :
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center text-center">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item" data-aos="fade-up" data-aos-duration="2400">
+                            <div class="fw-bold"><img src="img/bca.png" width="100px"></div>
+                            Rekening : 123456789 - Putri maharani <br>
+                            <!-- Ubah juga data-copy sesuai dengan no rekening -->
+                            <button class="btn btn-primary btn-sm rounded-3 px-5" data-copy="123456789"
+                                onclick="copyText(this)">salin</button>
+                        </li>
+                        <li class="list-group-item" data-aos="fade-up" data-aos-duration="2600">
+                            <div class="fw-bold"><img src="img/bri.png" width="70px" style="margin-bottom: 5px;"></div>
+                            Rekening : 987654321 - Putri maharani <br>
+                            <button class="btn btn-primary btn-sm rounded-3 px-5" data-copy="987654321"
+                                onclick="copyText(this)">salin</button>
+
+                        </li>
+                        <li class="list-group-item" data-aos="fade-up" data-aos-duration="2600">
+                            <img src="img/QRdana.jpg" class="img-fluid" style="border-radius: 50px;">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <small class="block">&copy; 2024 Ariawan&Rina. All Rights Reserved.</small>
+              <small class="block">Design by <a href="https://www.instagram.com/yyayany/">@YayanRif'an</a>.</small>
+    
+              <ul class="mt-3">
+                <li><a href="https://www.instagram.com/yyayany/"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/share/3vrhUH3zysbjaqsT/?mibextid=qi2Omg"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <!-- script internal -->
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>

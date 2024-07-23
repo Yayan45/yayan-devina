@@ -1,0 +1,225 @@
+:root{
+    --primary-color:white;
+    --bg:#0F0E0E;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Work Sans', sans-serif;
+  }
+
+  .font-arabic {
+      font-family: 'Noto Naskh Arabic', serif !important;
+  }
+  .font-aestetik{
+    font-family: 'sacramento', cursive; 
+}
+.color-primary{
+    color: goldenrod;
+}
+.cover{
+    min-height: 100vh;
+}
+.cover .box{
+    padding-top:130px ;
+}
+
+.hero{
+ background-color: var(--bg);
+}
+.hero h4{
+    margin-top: -20px;
+    font-weight: 400;
+}
+.text-date {
+    font-family:'sacramento', cursive;
+    font-size: 32px;
+}
+#count-down h2{
+    font-family:'work sans', sans-serif;
+    font-size: 30px;
+}
+#story{
+background-color: #0F0E0E;
+}
+.story h2{
+    font-size: 60px;
+}
+
+.couple img {
+    width: 100%;
+  }
+  .heart {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(65px);
+  }
+  .heart i {
+    margin: auto;
+    color: red;
+  }
+  .couple h3{
+    font-family:'sacramento', cursive;
+    font-size: 45px;
+}
+.info h2{
+    font-family:'sacramento', cursive;
+    color: goldenrod;
+    font-size: 60px;
+    margin-top: 25px;
+}
+.time{
+    padding-bottom: 50px;
+    text-align: center;
+}
+.rsvp{
+    background-color: #0F0E0E;
+    color: white;
+}
+.rsvp h2{
+    margin-top: 30px;
+    font-size: 60px;
+}
+.gifts h2{
+    font-size: 60px;
+}
+footer {
+    padding: 3rem;
+    background-color: #0a0a0a;
+    color: white;
+  }
+  
+  footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: white;
+  }
+  
+  footer li {
+    list-style: none;
+    display: inline;
+    margin: 0.5rem;
+  }
+  .navbar{
+    background-color: rgb(133, 103, 29);
+    color: white;
+  }
+  .navbar ul li a{
+    color: white;
+  }
+  .navbar ul li a:hover{
+    color: white;
+  }
+  .audio-icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+    position: fixed;
+    bottom: 5rem;
+    right: 1rem;
+    cursor: pointer;
+    color: white;
+    opacity: 0.5;
+    mix-blend-mode: difference;
+    animation: rotating 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    z-index: 1;
+  }
+  .navbar{
+    margin-bottom: -3px;
+  }
+
+  @keyframes rotating {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+/* tablet */
+@media (max-width: 900px) {
+    .couple .up{
+        margin-top: 30px;
+    }
+    .heart{
+        display: none;
+    } 
+}
+
+
+
+
+/* mobile phone */
+@media (max-width: 576px) {
+    .hero h4{
+        font-weight:100;
+        font-size: 18px;
+    }
+    .hero p{
+        font-weight:100;
+        font-size: 13px;
+    }
+    .navbar-collapse span{
+        font-size: 12px;
+    }
+    .heart{
+        display: none;
+    } 
+    .couple h3{
+        font-size: 30px;
+      }
+    .couple .up{
+        margin-top: 30px;
+    }
+    .info h2{
+        font-family:'sacramento', cursive;
+        color: goldenrod;
+        margin-top: 20px;
+        font-size: 2.4rem;
+    }
+    .rsvp h2{
+        margin-top: 30px;
+        font-size: 37px;
+    }
+    .gifts h2{
+        font-size: 39px;
+    }
+    .gifts p{
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .info p{
+        font-size: 14px;   
+        font-weight: 300;
+    }
+    .teks-time #day, #hour, #minute, #second{
+        font-size: 20px;
+    }
+    .teks-time  #hour{
+        font-size: 20px;
+    }
+    .teks-time  #minute{
+        font-size: 20px;
+    }
+    .teks-time  #second{
+        font-size: 20px;
+    }
+}
