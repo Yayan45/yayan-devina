@@ -18,7 +18,7 @@ function sendMessage() {
     const jumlah = document.getElementById('jumlah').value;
     const pesan = document.getElementById('pesan').value;
 
-    const url = "https://api.whatsapp.com/send?phone=683123951548&text=_Konfirmasi%20Kehadiran_%0A%0ANama%20%20%20%20%20%20%20%20%3A%20%20*" + nama + "*%0AAlamat%20%20%20%20%20%20%3A%20%20*" + alamat + "*%0AKehadiran%20%3A%20%20*" + konfirmasi + "*%0AJumlah%20%20%20%20%20%20%3A%20%20*" + jumlah + "*%0Apesan%20%20%20%20%20%20%20%20%3A%20*" + pesan + "*";
+    const url = "https://api.whatsapp.com/send?phone=6283123951548&text=_Konfirmasi%20Kehadiran_%0A%0ANama%20%20%20%20%20%20%20%20%3A%20%20*" + nama + "*%0AAlamat%20%20%20%20%20%20%3A%20%20*" + alamat + "*%0AKehadiran%20%3A%20%20*" + konfirmasi + "*%0AJumlah%20%20%20%20%20%20%3A%20%20*" + jumlah + "*%0Apesan%20%20%20%20%20%20%20%20%3A%20*" + pesan + "*";
     window.open(url);
 }
 
