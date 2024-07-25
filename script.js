@@ -42,17 +42,20 @@ function copyText(button) {
         var msg = successful ? 'Nomor rekening telah disalin: ' + textToCopy : 'Gagal menyalin nomor rekening';
 
         if (successful) {
+            // Simpan teks asli dan kelas asli tombol
+            var originalText = button.innerText;
+            var originalClass = button.className;
+
             // Mengubah teks tombol menjadi "Sudah Tercopy"
             button.innerText = 'tersalin';
             button.classList.remove('btn-primary');
             button.classList.add('btn-info');
 
-            // Mengembalikan teks tombol asli setelah 3 detik
+            // Mengembalikan teks dan kelas tombol asli setelah 3 detik
             setTimeout(function () {
-                button.innerText = 'tersalin';
-                button.classList.remove('btn-primary');
-                button.classList.add('btn-info');
-            }, 3000);
+                button.innerText = originalText;
+                button.className = originalClass;
+            }, 1000);
         } else {
             console.error(msg);
         }
@@ -63,6 +66,7 @@ function copyText(button) {
     // Menghapus elemen textarea yang tidak terlihat
     document.body.removeChild(textarea);
 }
+
 
 
 
@@ -128,3 +132,44 @@ const namaContainer = document.querySelector('#cover .box span');
 namaContainer.innerText = `${pronoun} ${nama}`;
 
 document.querySelector('#nama').value = nama;
+
+
+
+//animasi carausel
+    $(document).ready(function () {
+        $('#carouselGallery').on('slide.bs.carousel', function (e) {
+            var $e = $(e.relatedTarget);
+            var idx = $e.index();
+            var itemsPerSlide = 1; // Number of items per slide
+            var totalItems = $('.carousel-item').length;
+            
+            if (idx >= totalItems - (itemsPerSlide - 1)) {
+                var it = itemsPerSlide - (totalItems - idx);
+                for (var i = 0; i < it; i++) {
+                    // Append slides to end when needed
+                    if (e.direction == "left") {
+                        $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                    } else {
+                        $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                    }
+                }
+            }
+        });
+
+        // Add animations when the carousel slides
+        $('#carouselGallery').on('slide.bs.carousel', function (e) {
+            var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
+            doAnimations($animatingElems);
+        });
+
+        function doAnimations(elems) {
+            var animEndEv = 'webkitAnimationEnd animationend';
+            elems.each(function () {
+                var $this = $(this),
+                    $animationType = $this.data('animation');
+                $this.addClass($animationType).one(animEndEv, function () {
+                    $this.removeClass($animationType);
+                });
+            });
+        }
+    });

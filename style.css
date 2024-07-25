@@ -167,6 +167,19 @@ footer {
         display: none;
     } 
 }
+/* ANimasi CSS */
+.carousel-item {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
 
 
 
@@ -230,5 +243,24 @@ footer {
     .teks-time  #second{
         font-size: 20px;
     }
+    .hero h4{
+      font-size: 17px;
+    }
+    .hero p{
+      font-size: 12px;
+      text-align: center;
+    }
+}
 
+
+@media (min-width: 992px) {
+  .d-lg-none {
+      display: none !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .d-lg-block {
+      display: none !important;
+  }
 }
