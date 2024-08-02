@@ -146,6 +146,10 @@ footer {
     margin-top:-20px;
     color: goldenrod;
   }
+  .hero p {
+    font-weight: 100;
+  }
+
 
   @keyframes rotating {
     from {
@@ -159,14 +163,31 @@ footer {
 
 
 /* tablet */
-@media (max-width: 900px) {
+@media (max-width: 991px) {
     .couple .up{
         margin-top: 30px;
     }
     .heart{
         display: none;
+        opacity: 1;
     } 
-}
+    .hero p{
+      font-weight:100;
+    }
+    .couple h3{
+      font-size: 38px;
+    }
+    .hero h4{
+      font-size: 21px
+    }
+  }
+  /* @media(max width: 1000px){
+  .heart{
+    display: none;
+  }
+} */
+
+
 /* ANimasi CSS */
 .carousel-item {
   opacity: 0;
@@ -201,7 +222,7 @@ footer {
         display: none;
     } 
     .couple h3{
-        font-size: 30px;
+        font-size: 24px;
       }
     .couple .up{
         margin-top: 30px;
@@ -210,11 +231,11 @@ footer {
         font-family:'sacramento', cursive;
         color: goldenrod;
         margin-top: 20px;
-        font-size: 3.1rem;
+        font-size: 37px;
     }
     .rsvp h2{
         margin-top: 30px;
-        font-size: 37px;
+        font-size: 34px;
     }
     .rsvp p{
         font-weight: 100;
@@ -225,11 +246,11 @@ footer {
     }
     .gifts p{
         font-size: 12px;
-        font-weight: 300;
+        font-weight: 100;
     }
     .info p{
         font-size: 12px;   
-        font-weight: 300;
+        font-weight: 100;
     }
     .teks-time #day, #hour, #minute, #second{
         font-size: 20px;
@@ -246,9 +267,12 @@ footer {
     .hero h4{
       font-size: 17px;
     }
-    .hero p{
-      font-size: 12px;
-      text-align: center;
+    .hero-caption h4{
+      font-weight: 400;
+      font-size: 13px;
+    }
+    .hero-caption p{
+      font-size: 10px;
     }
 }
 
